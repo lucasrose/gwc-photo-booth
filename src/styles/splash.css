@@ -1,0 +1,19 @@
+.splash-screen {
+  width: 100vw;
+  height: 100vh;
+  pointer-events: none;
+  font-family: 'Raleway', sans-serif;
+  font-weight: bolder;
+  font-size: 18px;
+  animation: fade-out 10s ease-out infinite;
+}
+
+@keyframes fade-out {
+  0% {
+    opacity: 1
+  }
+
+  100% {
+    opacity: .6
+  }
+}
