@@ -55,5 +55,8 @@
 .filter-booth-title {
   margin-top: 2em;
   font-size: 20px;
+  margin-right: auto;
+  margin-left: auto;
+  display: flex;
   font-weight: 800;
 }
