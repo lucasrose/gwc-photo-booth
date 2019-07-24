@@ -5,6 +5,7 @@ import { filters } from '../utilities/helpers';
 function compute(context, canvas, input, stopped, width, height) {
   const currentFilter = input.getAttribute('currentfilter');
   filters[currentFilter](input, context, width, height);  
+  
   requestAnimationFrame(function () {  
       if(stopped) {
           context.fillStyle = "black";
