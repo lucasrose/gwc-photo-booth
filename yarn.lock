@@ -2997,6 +2997,10 @@ es-to-primitive@^1.2.0:
     is-date-object "^1.0.1"
     is-symbol "^1.0.2"
 
+es6-promise@^4.0.5:
+  version "4.2.8"
+  resolved "https://registry.yarnpkg.com/es6-promise/-/es6-promise-4.2.8.tgz#4eb21594c972bc40553d276e510539143db53e0a"
+
 escape-html@~1.0.3:
   version "1.0.3"
   resolved "https://registry.yarnpkg.com/escape-html/-/escape-html-1.0.3.tgz#0258eae4d3d0c0974de1c169188ef0051d1d1988"
@@ -4028,6 +4032,18 @@ ignore@^3.3.5:
 ignore@^4.0.6:
   version "4.0.6"
   resolved "https://registry.yarnpkg.com/ignore/-/ignore-4.0.6.tgz#750e3db5862087b4737ebac8207ffd1ef27b25fc"
+
+image-filter-colorize@^1.0.0:
+  version "1.0.0"
+  resolved "https://registry.yarnpkg.com/image-filter-colorize/-/image-filter-colorize-1.0.0.tgz#64ea10abb95af922cf5db8b9d15d7d0e3c7670be"
+  dependencies:
+    image-filter-core "^2.0.0"
+
+image-filter-core@^2.0.0:
+  version "2.0.2"
+  resolved "https://registry.yarnpkg.com/image-filter-core/-/image-filter-core-2.0.2.tgz#1b994c9b9e34476530de9ca8450e85f87a81bd10"
+  dependencies:
+    es6-promise "^4.0.5"
 
 immer@1.10.0:
   version "1.10.0"

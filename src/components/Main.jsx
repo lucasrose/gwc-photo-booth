@@ -4,13 +4,14 @@ import Canvas from './Canvas';
 import FilterBoothTitle from './FilterBoothTitle';
 
 function Main() {
-  const [filter, setFilter] = useState(null);
+  const [currentFilter, setCurrentFilter] = useState('default');
   return (
     <>
       <FilterBoothTitle name="GWC Photo Booth"/>
-      <Canvas filter={filter} />
+      <Canvas currentFilter={currentFilter} />
       <FilterList
-        handleClick={setFilter}
+        currentFilter={currentFilter}
+        setCurrentFilter={setCurrentFilter}
       />
     </>
   );

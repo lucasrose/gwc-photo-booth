@@ -20,6 +20,9 @@
   font-size: 14px;
   text-align: center;
 }
+.filter-item:hover {
+  background: burlywood;
+}
 
 .filter-item-name {
   top: 50%;
@@ -42,7 +45,7 @@
 }
 
 .filter-booth {
-  background: orange;
+  box-shadow: 0 1px 3px rgba(0,0,0,0.12), 0 1px 2px rgba(0,0,0,0.24);
   width: 60%;
   height: 50%;
   flex-basis: center;
