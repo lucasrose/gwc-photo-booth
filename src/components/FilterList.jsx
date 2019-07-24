@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import FilterItem from './FilterItem';
-import { getFilters } from '../utilities/helpers';
+import { getFilters, generateGradient } from '../utilities/helpers';
 import '../styles/filterBooth.css';
 
 function FilterList(props) {
@@ -9,7 +9,8 @@ function FilterList(props) {
   return (
     <div className="filter-list">
       { filters.map((filter, index) => {
-        return <FilterItem key={index} name={filter} handleClick={handleClick} />
+        const color = generateGradient();
+        return <FilterItem key={index} name={filter} color={color} handleClick={handleClick} />
       })}
     </div>
   );

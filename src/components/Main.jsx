@@ -1,16 +1,16 @@
 import React, {useState} from 'react';
 import FilterList from './FilterList';
-import Booth from './Booth';
+import Canvas from './Canvas';
 import FilterBoothTitle from './FilterBoothTitle';
 
 function Main() {
-  const [currentFilter, setCurrentFilter] = useState(null);
+  const [filter, setFilter] = useState(null);
   return (
     <>
       <FilterBoothTitle name="GWC Photo Booth"/>
-      <Booth/>
+      <Canvas filter={filter} />
       <FilterList
-        handleClick={setCurrentFilter}
+        handleClick={setFilter}
       />
     </>
   );
