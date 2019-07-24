@@ -18,5 +18,5 @@ export const generateGradient = () => {
 }
 
 export const getFilters = () => {
-  return ['Filter 1', 'Filter 2', 'Filter 3', 'Filter 4', 'Filter 5'];
+  return ['Grayscale', 'Inverted', 'Red', 'Green', 'Blue', 'Yellow', 'Rainbow', 'Cyan', 'Pixelated', 'Blurry'];
 }

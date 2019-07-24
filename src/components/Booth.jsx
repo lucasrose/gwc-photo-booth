@@ -1,10 +1,10 @@
 import React, { useState, useEffect } from 'react';
+import '../styles/filterBooth.css';
 
 function Booth() {
-
+  //TODO: ADD CANVAS HERE
   return (
-    <div>
-      BOOTH
+    <div className="filter-booth">
     </div>
   );
 }
