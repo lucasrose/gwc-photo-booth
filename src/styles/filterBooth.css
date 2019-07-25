@@ -46,10 +46,10 @@
 
 .filter-booth {
   box-shadow: 0 1px 3px rgba(0,0,0,0.12), 0 1px 2px rgba(0,0,0,0.24);
-  width: 60%;
+  width: 40%;
   height: 50%;
   flex-basis: center;
-  margin-left: 20%;
+  margin-left: 30%;
   margin-top: 5em;
   left: 0;
   border-radius: 5px;
@@ -62,4 +62,13 @@
   margin-left: auto;
   display: flex;
   font-weight: 800;
+}
+
+canvas {
+  position: relative;
+  height: 100%;
+  vertical-align: center;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
 }
