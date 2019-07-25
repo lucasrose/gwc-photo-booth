@@ -1,10 +1,11 @@
 import React, { useRef, useEffect } from 'react';
 import '../styles/filterBooth.css';
 import { filters } from '../utilities/helpers';
+import logo from '../logo.png';
 
-function compute(context, canvas, input, stopped, width, height) {
+function compute(context, canvas, input, stopped, width, height, el) {
   const currentFilter = input.getAttribute('currentfilter');
-  filters[currentFilter](input, context, width, height);  
+  filters[currentFilter](input, context, width, height, el);  
   
   requestAnimationFrame(function () {  
       if(stopped) {
@@ -12,7 +13,7 @@ function compute(context, canvas, input, stopped, width, height) {
           context.fillRect(0, 0, canvas.width, canvas.height);
           return;
       }
-      compute(context, canvas, input, stopped, width, height);
+      compute(context, canvas, input, stopped, width, height, el);
   }); 
 }
 
@@ -30,11 +31,14 @@ function Canvas(props) {
     const context = canvas.getContext("2d");
     const input = videoRef.current;
 
+    let el = document.createElement('img');
+    el.src = logo;
+
     input.addEventListener("play", function() {
         if (input != null) {
           width = input.width;  
           height = input.height;
-          compute(context, canvas, input, stopped, width, height);
+          compute(context, canvas, input, stopped, width, height, el);
         }        
     }, false);
     window.navigator.mediaDevices.getUserMedia({ audio: false, video: { width: 640, height: 480 } })

@@ -81,4 +81,44 @@ export const filters = {
 
     return; 
   },
+  'transparency': (input, context, width, height) => {
+    if (input.paused || input.ended) return;  
+    
+    context.drawImage(input, 0, 0, width, height);
+    var frame = context.getImageData(0, 0, width, height);
+    var l = frame.data.length / 4;  
+
+    for (var i = 0; i < l; i++) {
+        var grey = (frame.data[i * 4 + 0] + frame.data[i * 4 + 1] + frame.data[i * 4 + 2]) / 3;
+
+        //frame.data[i * 4 + 0] = 255 - frame.data[i * 4 + 0]
+        //frame.data[i * 4 + 1] = 255 - frame.data[i * 4 + 1];
+        //frame.data[i * 4 + 2] = 255 - frame.data[i * 4 + 2];
+        frame.data[i * 4 + 3] =  75;
+    }
+    context.putImageData(frame, 0, 0);
+
+    return; 
+  },
+  'logo': (input, context, width, height, el) => {
+    if (input.paused || input.ended) return;  
+    
+    context.drawImage(input, 0, 0, width, height);
+    var frame = context.getImageData(0, 0, width, height);
+    var l = frame.data.length / 4;  
+
+    for (var i = 0; i < l; i++) {
+        var grey = (frame.data[i * 4 + 0] + frame.data[i * 4 + 1] + frame.data[i * 4 + 2]) / 3;
+
+        //frame.data[i * 4 + 0] = 255 - frame.data[i * 4 + 0]
+        //frame.data[i * 4 + 1] = 255 - frame.data[i * 4 + 1];
+        //frame.data[i * 4 + 2] = 255 - frame.data[i * 4 + 2];
+        //frame.data[i * 4 + 3] =  75;
+    }
+
+    context.putImageData(frame, 0, 0);
+    context.drawImage(el, 590, 400, 50, 80);
+    return; 
+  }
+
 };
