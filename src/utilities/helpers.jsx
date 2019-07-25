@@ -1,4 +1,11 @@
+import logo from '../logo.png';
 const hexValues = ["0","1","2","3","4","5","6","7","8","9","a","b","c","d","e"];
+
+const createImage = (src) => {
+  let el = document.createElement('img');
+  el.src = src;
+  return el;
+}
 
 const populate = (a) => {
   for ( let i = 0; i < 6; i++ ) {
@@ -100,7 +107,7 @@ export const filters = {
 
     return; 
   },
-  'logo': (input, context, width, height, el) => {
+  'logo': (input, context, width, height) => {
     if (input.paused || input.ended) return;  
     
     context.drawImage(input, 0, 0, width, height);
@@ -115,7 +122,8 @@ export const filters = {
         //frame.data[i * 4 + 2] = 255 - frame.data[i * 4 + 2];
         //frame.data[i * 4 + 3] =  75;
     }
-
+    const el = createImage(logo);
+    
     context.putImageData(frame, 0, 0);
     context.drawImage(el, 590, 400, 50, 80);
     return; 
